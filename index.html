@@ -4,35 +4,51 @@
 		<meta charset="utf-8">
 		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 		<script>
+			//Globals --- yay
 			var macros, curpos, deletedChar;
+			//import the macros json
 			$.ajax("macros.json", {"async":false, "complete": function(data, status){
 				macros = JSON.parse(data.responseText);
 			}});
 			
 			$(document).ready(function() {
+				//the text area
 				var t = $("#t");
+				//focus the text area onload
+				t.focus();
+				//bind the keyup event for space and return
 				t.keyup(function(event){
 					if(event.which == 32 || event.which == 13){
+						//we loose the char that was typed so we need to remember what is was
 						deletedChar = event.which;
+						//Get the value of the text area
 						var val = t.val();
+						//Get the cursor position so we can reposition it after the replace
 						curpos = t.prop("selectionStart");
+						//calls the replacer function for each macro it finds using the regex
 						t.val(val.replace(/:\w+\s?/, replacer));
+						//puts the cursor back to the position it should be in
 						t.prop("selectionStart", curpos);
 						t.prop("selectionEnd", curpos);
 					}
 				});
 			});
 			
+			//replacer works out which unicode char to replace the matched macro with
 			function replacer(match, p1, p2, p3, offset, string){
+				//Search the macros json for the one entered
 				for(i in macros[0]["items"]){
 					if(macros[0]["items"][i]["abbreviation"]["abbreviation"] == match.substr(0, match.length-1)){
-						
+						//Adjusts the cursor position by the length of the matched phrase
 						curpos -= match.length-macros[0]["items"][i]["phrase"].length;
 						
+						//adds one to move the cursor past the extra char were about to add
 						curpos += 1;
+						//adds the char that was lost to the phrase and returns
 						return macros[0]["items"][i]["phrase"] + String.fromCharCode(deletedChar);
 					}
 				}
+				//if no macro don't change anything
 				return match;
 			}
 		</script>
@@ -45,6 +61,6 @@
 		</style>
 	</head>
 	<body>
-		<textarea accept-charset="UTF-8" id="t"></textarea>
+		<textarea accept-charset="UTF-8" id="t" placeholder="Type your Z here"></textarea>
 	</body>
 </html>
