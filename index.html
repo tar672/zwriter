@@ -19,7 +19,6 @@
 						t.val(val.replace(/:\w+\s?/, replacer));
 						t.prop("selectionStart", curpos);
 						t.prop("selectionEnd", curpos);
-						
 					}
 				});
 			});
@@ -27,7 +26,10 @@
 			function replacer(match, p1, p2, p3, offset, string){
 				for(i in macros[0]["items"]){
 					if(macros[0]["items"][i]["abbreviation"]["abbreviation"] == match.substr(0, match.length-1)){
-						curpos -= match.length-2;
+						
+						curpos -= match.length-macros[0]["items"][i]["phrase"].length;
+						
+						curpos += 1;
 						return macros[0]["items"][i]["phrase"] + String.fromCharCode(deletedChar);
 					}
 				}
@@ -42,14 +44,7 @@
 			}
 		</style>
 	</head>
-	
 	<body>
 		<textarea accept-charset="UTF-8" id="t"></textarea>
-		
-		
-	
-		<script>
-		
-		</script>
 	</body>
 </html>
