@@ -6,8 +6,8 @@
 		<script src="macros" type="text/javascript"></script>
 		<script>
 			//To keep track of where the cursor should go
-			var curpos;
-
+			var curpos, replaced;
+			var changed = false;
 			$(document).ready(function() {
 				//the text area
 				var t = $("#t");
@@ -22,13 +22,21 @@
 				t.keyup(function(event){
 					//Get the cursor position so we can reposition it after the replace
 					curpos = t.prop("selectionStart");
-
+					
 					//calls the replacer function for each macro it finds using the regex
-					t.val(t.val().replace(macroRegex, replacer));
+					replaced = t.val().replace(macroRegex, replacer);
+					
+					//if macro's have been replaced
+					if(changed){
+						//write the new value
+						t.val(replaced);
 
-					//puts the cursor back to the position it should be in
-					t.prop("selectionStart", curpos);
-					t.prop("selectionEnd", curpos);
+						//puts the cursor back to the position it should be in
+						t.prop("selectionStart", curpos);
+						t.prop("selectionEnd", curpos);
+
+						changed = false;
+					}
 				});
 			});
 			
@@ -37,6 +45,9 @@
 				if(macros[p1]){
 					//Adjusts the cursor position by the length of the matched phrase
 					curpos -= match.length-macros[p1].length;
+
+					//note that macros have been replaced
+					changed = true;
 					return macros[p1];
 				}
 				//if no macro don't change anything
