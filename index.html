@@ -17,36 +17,30 @@
 				//focus the text area onload
 				t.focus();
 				//bind the keyup event for space and return
+				var macroRegex = RegExp(/:(\w+)([^\w]+)/);
 				t.keyup(function(event){
-					if(event.which == 32 || event.which == 13){
-						//we loose the char that was typed so we need to remember what is was
-						deletedChar = event.which;
-						//Get the cursor position so we can reposition it after the replace
-						curpos = t.prop("selectionStart");
-						//Get the value of the text area
-						var val = t.val();
-						//calls the replacer function for each macro it finds using the regex
-						t.val(val.replace(/:\w+\s?/, replacer));
-						//puts the cursor back to the position it should be in
-						t.prop("selectionStart", curpos);
-						t.prop("selectionEnd", curpos);
-					}
+					//Get the cursor position so we can reposition it after the replace
+					curpos = t.prop("selectionStart");
+					//Get the value of the text area
+					var val = t.val();
+					//calls the replacer function for each macro it finds using the regex
+					t.val(val.replace(macroRegex, replacer));
+					//puts the cursor back to the position it should be in
+					t.prop("selectionStart", curpos);
+					t.prop("selectionEnd", curpos);
 				});
 			});
 			
 			//replacer works out which unicode char to replace the matched macro with
-			function replacer(match, p1, p2, p3, offset, string){
-				//Search the macros json for the one entered
-				for(i in macros){
-					if(":"+macros[i] == match.substr(0, match.length-1)){
-						//Adjusts the cursor position by the length of the matched phrase
-						curpos -= match.length-i.length;
-						
-						//adds one to move the cursor past the extra char were about to add
-						curpos += 1;
-						//adds the char that was lost to the phrase and returns
-						return i + String.fromCharCode(deletedChar);
-					}
+			function replacer(match, p1, p2){
+				if(macros[p1]){
+					//Adjusts the cursor position by the length of the matched phrase
+					curpos -= match.length-macros[p1].length;
+					
+					//adds one to move the cursor past the extra char were about to add
+					curpos += 1;
+					//adds the char that was lost to the phrase and returns
+					return macros[p1] + p2;
 				}
 				//if no macro don't change anything
 				return match;
