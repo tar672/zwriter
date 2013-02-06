@@ -37,15 +37,17 @@
 			//replacer works out which unicode char to replace the matched macro with
 			function replacer(match, p1, p2, p3, offset, string){
 				//Search the macros json for the one entered
-				for(i in macros[0]["items"]){
-					if(macros[0]["items"][i]["abbreviation"]["abbreviation"] == match.substr(0, match.length-1)){
+				for(i in macros){
+					console.log(macros[i]);
+					console.log(":"+match.substr(0, match.length-1));
+					if(":"+macros[i] == match.substr(0, match.length-1)){
 						//Adjusts the cursor position by the length of the matched phrase
-						curpos -= match.length-macros[0]["items"][i]["phrase"].length;
+						curpos -= match.length-i.length;
 						
 						//adds one to move the cursor past the extra char were about to add
 						curpos += 1;
 						//adds the char that was lost to the phrase and returns
-						return macros[0]["items"][i]["phrase"] + String.fromCharCode(deletedChar);
+						return i + String.fromCharCode(deletedChar);
 					}
 				}
 				//if no macro don't change anything
@@ -53,6 +55,9 @@
 			}
 		</script>
 		<style>
+			html {
+				font-family: monospace;
+			}
 			#t {
 				width: 100%;
 				height: 100%;
@@ -62,5 +67,13 @@
 	</head>
 	<body>
 		<textarea accept-charset="UTF-8" id="t" placeholder="Type your Z here"></textarea>
+		<div>
+			<table>
+				<tr>
+					<th>Macro</th><th>Symbol</th>
+					<td>:all</td><td>&#2200;</td>
+				</tr>
+			</table>
+		</div>
 	</body>
 </html>
