@@ -1,0 +1,484 @@
+[
+    {
+        "folders": [], 
+        "usageCount": 110, 
+        "modes": [], 
+        "abbreviation": {
+            "ignoreCase": false, 
+            "wordChars": "[\\w]", 
+            "immediate": false, 
+            "abbreviation": null, 
+            "backspace": true, 
+            "triggerInside": false
+        }, 
+        "title": "Z macros", 
+        "hotkey": {
+            "hotKey": null, 
+            "modifiers": []
+        }, 
+        "items": [
+            {
+                "usageCount": 35, 
+                "omitTrigger": true, 
+                "prompt": false, 
+                "description": "Exists", 
+                "abbreviation": {
+                    "ignoreCase": false, 
+                    "wordChars": "[\\w]", 
+                    "immediate": false, 
+                    "abbreviation": ":ex", 
+                    "backspace": true, 
+                    "triggerInside": false
+                }, 
+                "hotkey": {
+                    "hotKey": "\uff2a", 
+                    "modifiers": []
+                }, 
+                "phrase": "\u2203", 
+                "modes": [
+                    1
+                ], 
+                "showInTrayMenu": false, 
+                "matchCase": false, 
+                "filter": null, 
+                "type": "phrase", 
+                "sendMode": "<shift>+<insert>"
+            }, 
+            {
+                "usageCount": 18, 
+                "omitTrigger": true, 
+                "prompt": false, 
+                "description": "All", 
+                "abbreviation": {
+                    "ignoreCase": false, 
+                    "wordChars": "[\\w]", 
+                    "immediate": false, 
+                    "abbreviation": ":all", 
+                    "backspace": true, 
+                    "triggerInside": false
+                }, 
+                "hotkey": {
+                    "hotKey": "\uff2a", 
+                    "modifiers": []
+                }, 
+                "phrase": "\u2200", 
+                "modes": [
+                    1
+                ], 
+                "showInTrayMenu": false, 
+                "matchCase": false, 
+                "filter": null, 
+                "type": "phrase", 
+                "sendMode": "<shift>+<insert>"
+            }, 
+            {
+                "usageCount": 4, 
+                "omitTrigger": true, 
+                "prompt": false, 
+                "description": "Bullet", 
+                "abbreviation": {
+                    "ignoreCase": false, 
+                    "wordChars": "[\\w]", 
+                    "immediate": false, 
+                    "abbreviation": ":b", 
+                    "backspace": true, 
+                    "triggerInside": false
+                }, 
+                "hotkey": {
+                    "hotKey": "\uff2a", 
+                    "modifiers": []
+                }, 
+                "phrase": "\u2219", 
+                "modes": [
+                    1
+                ], 
+                "showInTrayMenu": false, 
+                "matchCase": false, 
+                "filter": null, 
+                "type": "phrase", 
+                "sendMode": "<shift>+<insert>"
+            }, 
+            {
+                "usageCount": 6, 
+                "omitTrigger": true, 
+                "prompt": false, 
+                "description": "Exists!", 
+                "abbreviation": {
+                    "ignoreCase": false, 
+                    "wordChars": "[\\w]", 
+                    "immediate": false, 
+                    "abbreviation": ":exu", 
+                    "backspace": true, 
+                    "triggerInside": false
+                }, 
+                "hotkey": {
+                    "hotKey": "\uff2a", 
+                    "modifiers": []
+                }, 
+                "phrase": "\u2203\u2081", 
+                "modes": [
+                    1
+                ], 
+                "showInTrayMenu": false, 
+                "matchCase": false, 
+                "filter": null, 
+                "type": "phrase", 
+                "sendMode": "<shift>+<insert>"
+            }, 
+            {
+                "usageCount": 11, 
+                "omitTrigger": true, 
+                "prompt": false, 
+                "description": "Nat", 
+                "abbreviation": {
+                    "ignoreCase": false, 
+                    "wordChars": "[\\w]", 
+                    "immediate": false, 
+                    "abbreviation": ":nat", 
+                    "backspace": true, 
+                    "triggerInside": false
+                }, 
+                "hotkey": {
+                    "hotKey": "\uff2a", 
+                    "modifiers": []
+                }, 
+                "phrase": "\u2115", 
+                "modes": [
+                    1
+                ], 
+                "showInTrayMenu": false, 
+                "matchCase": false, 
+                "filter": null, 
+                "type": "phrase", 
+                "sendMode": "<shift>+<insert>"
+            }, 
+            {
+                "usageCount": 4, 
+                "omitTrigger": true, 
+                "prompt": false, 
+                "description": "Int", 
+                "abbreviation": {
+                    "ignoreCase": false, 
+                    "wordChars": "[\\w]", 
+                    "immediate": false, 
+                    "abbreviation": ":int", 
+                    "backspace": true, 
+                    "triggerInside": false
+                }, 
+                "hotkey": {
+                    "hotKey": "\uff2a", 
+                    "modifiers": []
+                }, 
+                "phrase": "\u2124", 
+                "modes": [
+                    1
+                ], 
+                "showInTrayMenu": false, 
+                "matchCase": false, 
+                "filter": null, 
+                "type": "phrase", 
+                "sendMode": "<shift>+<insert>"
+            }, 
+            {
+                "usageCount": 3, 
+                "omitTrigger": true, 
+                "prompt": false, 
+                "description": "Imp", 
+                "abbreviation": {
+                    "ignoreCase": false, 
+                    "wordChars": "[\\w]", 
+                    "immediate": false, 
+                    "abbreviation": ":imp", 
+                    "backspace": true, 
+                    "triggerInside": false
+                }, 
+                "hotkey": {
+                    "hotKey": "\uff2a", 
+                    "modifiers": []
+                }, 
+                "phrase": "\u27f9", 
+                "modes": [
+                    1
+                ], 
+                "showInTrayMenu": false, 
+                "matchCase": false, 
+                "filter": null, 
+                "type": "phrase", 
+                "sendMode": "<shift>+<insert>"
+            }, 
+            {
+                "usageCount": 14, 
+                "omitTrigger": true, 
+                "prompt": false, 
+                "description": "In", 
+                "abbreviation": {
+                    "ignoreCase": false, 
+                    "wordChars": "[\\w]", 
+                    "immediate": false, 
+                    "abbreviation": ":in", 
+                    "backspace": true, 
+                    "triggerInside": false
+                }, 
+                "hotkey": {
+                    "hotKey": null, 
+                    "modifiers": []
+                }, 
+                "phrase": "\u2208", 
+                "modes": [
+                    1
+                ], 
+                "showInTrayMenu": false, 
+                "matchCase": false, 
+                "filter": null, 
+                "type": "phrase", 
+                "sendMode": "<shift>+<insert>"
+            }, 
+            {
+                "usageCount": 3, 
+                "omitTrigger": true, 
+                "prompt": false, 
+                "description": "Neg", 
+                "abbreviation": {
+                    "ignoreCase": false, 
+                    "wordChars": "[\\w]", 
+                    "immediate": false, 
+                    "abbreviation": ":neg", 
+                    "backspace": true, 
+                    "triggerInside": false
+                }, 
+                "hotkey": {
+                    "hotKey": null, 
+                    "modifiers": []
+                }, 
+                "phrase": "\u00ac", 
+                "modes": [
+                    1
+                ], 
+                "showInTrayMenu": false, 
+                "matchCase": false, 
+                "filter": null, 
+                "type": "phrase", 
+                "sendMode": "<shift>+<insert>"
+            }, 
+            {
+                "usageCount": 9, 
+                "omitTrigger": true, 
+                "prompt": false, 
+                "description": "Iff", 
+                "abbreviation": {
+                    "ignoreCase": false, 
+                    "wordChars": "[\\w]", 
+                    "immediate": false, 
+                    "abbreviation": ":iff", 
+                    "backspace": true, 
+                    "triggerInside": false
+                }, 
+                "hotkey": {
+                    "hotKey": "\uff2a", 
+                    "modifiers": []
+                }, 
+                "phrase": "\u27fa", 
+                "modes": [
+                    1
+                ], 
+                "showInTrayMenu": false, 
+                "matchCase": false, 
+                "filter": null, 
+                "type": "phrase", 
+                "sendMode": "<shift>+<insert>"
+            }, 
+            {
+                "usageCount": 5, 
+                "omitTrigger": true, 
+                "prompt": false, 
+                "description": "phi", 
+                "abbreviation": {
+                    "ignoreCase": false, 
+                    "wordChars": "[\\w]", 
+                    "immediate": false, 
+                    "abbreviation": ":phi", 
+                    "backspace": true, 
+                    "triggerInside": false
+                }, 
+                "hotkey": {
+                    "hotKey": null, 
+                    "modifiers": []
+                }, 
+                "phrase": "\u03c6", 
+                "modes": [
+                    1
+                ], 
+                "showInTrayMenu": false, 
+                "matchCase": false, 
+                "filter": null, 
+                "type": "phrase", 
+                "sendMode": "<shift>+<insert>"
+            }, 
+            {
+                "usageCount": 4, 
+                "omitTrigger": true, 
+                "prompt": false, 
+                "description": "psi", 
+                "abbreviation": {
+                    "ignoreCase": false, 
+                    "wordChars": "[\\w]", 
+                    "immediate": false, 
+                    "abbreviation": ":psi", 
+                    "backspace": true, 
+                    "triggerInside": false
+                }, 
+                "hotkey": {
+                    "hotKey": null, 
+                    "modifiers": []
+                }, 
+                "phrase": "\u03c8", 
+                "modes": [
+                    1
+                ], 
+                "showInTrayMenu": false, 
+                "matchCase": false, 
+                "filter": null, 
+                "type": "phrase", 
+                "sendMode": "<shift>+<insert>"
+            }, 
+            {
+                "usageCount": 1, 
+                "omitTrigger": true, 
+                "prompt": false, 
+                "description": "chi", 
+                "abbreviation": {
+                    "ignoreCase": false, 
+                    "wordChars": "[\\w]", 
+                    "immediate": false, 
+                    "abbreviation": ":chi", 
+                    "backspace": true, 
+                    "triggerInside": false
+                }, 
+                "hotkey": {
+                    "hotKey": null, 
+                    "modifiers": []
+                }, 
+                "phrase": "\u03c7", 
+                "modes": [
+                    1
+                ], 
+                "showInTrayMenu": false, 
+                "matchCase": false, 
+                "filter": null, 
+                "type": "phrase", 
+                "sendMode": "<shift>+<insert>"
+            }, 
+            {
+                "usageCount": 2, 
+                "omitTrigger": true, 
+                "prompt": false, 
+                "description": "theta", 
+                "abbreviation": {
+                    "ignoreCase": false, 
+                    "wordChars": "[\\w]", 
+                    "immediate": false, 
+                    "abbreviation": ":theta", 
+                    "backspace": true, 
+                    "triggerInside": false
+                }, 
+                "hotkey": {
+                    "hotKey": null, 
+                    "modifiers": []
+                }, 
+                "phrase": "\u03b8", 
+                "modes": [
+                    1
+                ], 
+                "showInTrayMenu": false, 
+                "matchCase": false, 
+                "filter": null, 
+                "type": "phrase", 
+                "sendMode": "<shift>+<insert>"
+            }, 
+            {
+                "usageCount": 9, 
+                "omitTrigger": true, 
+                "prompt": false, 
+                "description": "and", 
+                "abbreviation": {
+                    "ignoreCase": false, 
+                    "wordChars": "[\\w]", 
+                    "immediate": false, 
+                    "abbreviation": ":and", 
+                    "backspace": true, 
+                    "triggerInside": false
+                }, 
+                "hotkey": {
+                    "hotKey": null, 
+                    "modifiers": []
+                }, 
+                "phrase": "\u2227", 
+                "modes": [
+                    1
+                ], 
+                "showInTrayMenu": false, 
+                "matchCase": false, 
+                "filter": null, 
+                "type": "phrase", 
+                "sendMode": "<shift>+<insert>"
+            }, 
+            {
+                "usageCount": 1, 
+                "omitTrigger": true, 
+                "prompt": false, 
+                "description": "or", 
+                "abbreviation": {
+                    "ignoreCase": false, 
+                    "wordChars": "[\\w]", 
+                    "immediate": false, 
+                    "abbreviation": ":or", 
+                    "backspace": true, 
+                    "triggerInside": false
+                }, 
+                "hotkey": {
+                    "hotKey": null, 
+                    "modifiers": []
+                }, 
+                "phrase": "\u2228", 
+                "modes": [
+                    1
+                ], 
+                "showInTrayMenu": false, 
+                "matchCase": false, 
+                "filter": null, 
+                "type": "phrase", 
+                "sendMode": "<shift>+<insert>"
+            }, 
+            {
+                "usageCount": 2, 
+                "omitTrigger": true, 
+                "prompt": false, 
+                "description": "notin", 
+                "abbreviation": {
+                    "ignoreCase": false, 
+                    "wordChars": "[\\w]", 
+                    "immediate": false, 
+                    "abbreviation": ":notin", 
+                    "backspace": true, 
+                    "triggerInside": false
+                }, 
+                "hotkey": {
+                    "hotKey": null, 
+                    "modifiers": []
+                }, 
+                "phrase": "\u2209", 
+                "modes": [
+                    1
+                ], 
+                "showInTrayMenu": false, 
+                "matchCase": false, 
+                "filter": null, 
+                "type": "phrase", 
+                "sendMode": "<shift>+<insert>"
+            }
+        ], 
+        "filter": null, 
+        "type": "folder", 
+        "showInTrayMenu": false
+    }
+]

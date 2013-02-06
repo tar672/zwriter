@@ -1,0 +1,48 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script>
+			var macros;
+			$.ajax("macros.json", {"async":false, "complete": function(data, status){
+				macros = JSON.parse(data.responseText);
+			}});
+
+			$(document).ready(function() {
+				var t = $("#t");
+				t.keypress(function(event){
+					if(event.which == 32 || event.which == 13){
+						t.val(t.val().replace(/:\w+\s?/, replacer));
+					}
+				});
+			});
+			
+			function replacer(match, p1, p2, p3, offset, string){
+				for(i in macros[0]["items"]){
+					if(macros[0]["items"][i]["abbreviation"]["abbreviation"] == match){
+						return macros[0]["items"][i]["phrase"];
+					}
+				}
+				return match;
+			}
+		</script>
+		<style>
+			#t {
+				width: 100%;
+				height: 100%;
+				border: none;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<textarea accept-charset="UTF-8" id="t"></textarea>
+		
+		
+	
+		<script>
+		
+		</script>
+	</body>
+</html>
