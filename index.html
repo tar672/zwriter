@@ -4,24 +4,31 @@
 		<meta charset="utf-8">
 		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 		<script>
-			var macros;
+			var macros, curpos, deletedChar;
 			$.ajax("macros.json", {"async":false, "complete": function(data, status){
 				macros = JSON.parse(data.responseText);
 			}});
-
+			
 			$(document).ready(function() {
 				var t = $("#t");
-				t.keypress(function(event){
+				t.keyup(function(event){
 					if(event.which == 32 || event.which == 13){
-						t.val(t.val().replace(/:\w+\s?/, replacer));
+						deletedChar = event.which;
+						var val = t.val();
+						curpos = t.prop("selectionStart");
+						t.val(val.replace(/:\w+\s?/, replacer));
+						t.prop("selectionStart", curpos);
+						t.prop("selectionEnd", curpos);
+						
 					}
 				});
 			});
 			
 			function replacer(match, p1, p2, p3, offset, string){
 				for(i in macros[0]["items"]){
-					if(macros[0]["items"][i]["abbreviation"]["abbreviation"] == match){
-						return macros[0]["items"][i]["phrase"];
+					if(macros[0]["items"][i]["abbreviation"]["abbreviation"] == match.substr(0, match.length-1)){
+						curpos -= match.length-2;
+						return macros[0]["items"][i]["phrase"] + String.fromCharCode(deletedChar);
 					}
 				}
 				return match;
