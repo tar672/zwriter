@@ -21,10 +21,10 @@
 					if(event.which == 32 || event.which == 13){
 						//we loose the char that was typed so we need to remember what is was
 						deletedChar = event.which;
-						//Get the value of the text area
-						var val = t.val();
 						//Get the cursor position so we can reposition it after the replace
 						curpos = t.prop("selectionStart");
+						//Get the value of the text area
+						var val = t.val();
 						//calls the replacer function for each macro it finds using the regex
 						t.val(val.replace(/:\w+\s?/, replacer));
 						//puts the cursor back to the position it should be in
