@@ -1,7 +1,7 @@
 {
 	"int":"ℤ",
 	"nat":"ℕ",
-	"existsu":"∃₁",
+	"uexists":"∃₁",
 	"all":"∀",
 	"exists":"∃",
 	"notexists":"∄",
@@ -13,7 +13,7 @@
 	"or":"∨",
 	"cap":"∩",
 	"cup":"∪",
-	"subseteq":"⊂",
+	"eqsubset":"⊂",
 	"subset":"⊆",
 	"neg":"¬",
 	"neq":"≠",
