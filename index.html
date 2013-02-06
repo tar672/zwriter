@@ -3,28 +3,29 @@
 	<head>
 		<meta charset="utf-8">
 		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="macros" type="text/javascript"></script>
 		<script>
-			//Globals --- yay
-			var macros, curpos, deletedChar;
-			//import the macros json
-			$.ajax("macros.json", {"async":false, "complete": function(data, status){
-				macros = JSON.parse(data.responseText);
-			}});
-			
+			//To keep track of where the cursor should go
+			var curpos;
+
 			$(document).ready(function() {
 				//the text area
 				var t = $("#t");
+
 				//focus the text area onload
 				t.focus();
-				//bind the keyup event for space and return
+
+				//The regex to locate macros
 				var macroRegex = /:(\w+)/g;
+
+				//bind the keyup event for space and return
 				t.keyup(function(event){
 					//Get the cursor position so we can reposition it after the replace
 					curpos = t.prop("selectionStart");
-					//Get the value of the text area
-					var val = t.val();
+
 					//calls the replacer function for each macro it finds using the regex
-					t.val(val.replace(macroRegex, replacer));
+					t.val(t.val().replace(macroRegex, replacer));
+
 					//puts the cursor back to the position it should be in
 					t.prop("selectionStart", curpos);
 					t.prop("selectionEnd", curpos);
@@ -32,15 +33,10 @@
 			});
 			
 			//replacer works out which unicode char to replace the matched macro with
-			function replacer(match, p1, p2){
-				console.log(p1);
+			function replacer(match, p1){
 				if(macros[p1]){
 					//Adjusts the cursor position by the length of the matched phrase
 					curpos -= match.length-macros[p1].length;
-					
-					//adds one to move the cursor past the extra char were about to add
-					//curpos += 1;
-					//adds the char that was lost to the phrase and returns
 					return macros[p1];
 				}
 				//if no macro don't change anything

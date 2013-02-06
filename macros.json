@@ -1,4 +1,4 @@
-{
+macros = {
 	"int":"ℤ",
 	"nat":"ℕ",
 	"uexists":"∃₁",
