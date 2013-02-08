@@ -38,6 +38,13 @@
 						changed = false;
 					}
 				});
+				//restores previous content from localStorage
+				if('localStorage' in window && window['localStorage'] !== null){
+					if(localStorage.saved) t.val(localStorage.saved);
+					window.onbeforeunload = function (e) {
+						localStorage.saved = t.val();
+					}
+				}
 			});
 			
 			//replacer works out which unicode char to replace the matched macro with
