@@ -1,0 +1,7 @@
+switched nat and int
+
+renamed subseteq to eqsubset
+
+renamed existsu to uexists
+
+switched eqsubset and subset
