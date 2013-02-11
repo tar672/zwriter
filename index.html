@@ -2,8 +2,9 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<title>Z Syntax Writer</title>
 		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-		<script src="macros.js" type="text/javascript"></script>
+		<script src="macros.js" type="text/javascript" charset='utf-8'></script>
 		<script type="text/javascript">
 			//To keep track of where the cursor should go
 			var curpos, replaced;
@@ -80,7 +81,7 @@
 				font-family: 'xits_mathregular', monospace;
 			}
 			#t {
-				line-height: 1em;
+				line-height: 1.4em;
 				font-size: 4em;
 				font-family: inherit;
 				width: 100%;
@@ -90,6 +91,6 @@
 		</style>
 	</head>
 	<body>
-		<textarea accept-charset="UTF-8" id="t" placeholder="Type your Z here"></textarea>
+		<textarea id="t" placeholder="Type your Z here"></textarea>
 	</body>
 </html>
