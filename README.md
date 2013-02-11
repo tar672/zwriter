@@ -11,4 +11,4 @@ Example
 Sources
 =======
 
-xits-math font, from https://github.com/khaledhosny/xits-math.
+stixgeneral font, from http://www.stixfonts.org.
